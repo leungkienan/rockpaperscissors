@@ -1,12 +1,14 @@
 let cp = "str";
 let score = 0;
 function game(){
-    let input = window.prompt("Rock, Paper or Scissors?")
     for(let i = 0; i<5; i++){
+        let input = window.prompt("Rock, Paper or Scissors?")
         let n = Math.floor(Math.random() * 3);
         computerPlay(n);
         playRound(input, cp);
     }
+    console.log("You won "+score+ " times!")
+    score=0;
 }
 
 function computerPlay(num) {
@@ -32,9 +34,9 @@ function playRound(ps, cs) {
         (psI == "paper" && cs == "rock") ||
         (psI == "scissors" && cs == "paper")
         ) {
+            score++;
             console.log("You played " + psI);
             console.log("You win, " + psI + " beats " + cs + "!");
-            score++;
         } else if (
             (psI == "rock" && cs == "paper") ||
             (psI == "paper" && cs == "scissors") ||
