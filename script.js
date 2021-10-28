@@ -1,5 +1,8 @@
 let cp = "str";
 let score = 0;
+
+// game function doesnt work properly i think 
+
 function game(){
     for(let i = 0; i<5; i++){
         let input = window.prompt("Rock, Paper or Scissors?")
@@ -7,7 +10,7 @@ function game(){
         computerPlay(n);
         playRound(input, cp);
     }
-    console.log("You won "+score+ " times!")
+    console.log("You've won "+score+ " times!")
     score=0;
 }
 
