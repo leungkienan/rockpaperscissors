@@ -3,16 +3,20 @@ let score = 0;
 
 // game function doesnt work properly i think 
 
-function game(){
-    for(let i = 0; i<5; i++){
-        let input = window.prompt("Rock, Paper or Scissors?")
-        let n = Math.floor(Math.random() * 3);
-        computerPlay(n);
-        playRound(input, cp);
-    }
-    console.log("You've won "+score+ " times!")
-    score=0;
-}
+// function game(){
+//     for(let i = 0; i<5; i++){
+//         let input = window.prompt("Rock, Paper or Scissors?")
+//         let n = Math.floor(Math.random() * 3);
+//         computerPlay(n);
+//         playRound(input, cp);
+//     }
+//     console.log("You've won "+score+ " times!")
+//     score=0;
+// }
+
+const btn= document.querySelector('#rock')
+
+
 
 function computerPlay(num) {
   if (num == 0) {
